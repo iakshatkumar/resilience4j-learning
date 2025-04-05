@@ -20,7 +20,7 @@ retryExceptions: Which exceptions should trigger a retry.
 ignoreExceptions: Exceptions that shouldn't trigger a retry.
 Example -  Retrying a call to a flaky third-party API which sometimes fails due to temporary issues..
 
-4. A Rate Limiter controls how many requests a system or service can handle in a given time window to prevent overload and ensure fair usage.
+3. A Rate Limiter controls how many requests a system or service can handle in a given time window to prevent overload and ensure fair usage.
 Why use it? -Prevent abuse or accidental overload (e.g., too many requests from a client). -Protect downstream services or APIs. -Ensure system stability and availability.
 How it works? It limits the number of calls per second/minute/hour. Once the limit is hit: Additional requests are denied, delayed, or queued, depending on config.
 
