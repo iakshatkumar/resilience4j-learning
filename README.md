@@ -1,4 +1,4 @@
-1. A Circuit Breaker is a resilience pattern used in software systems to prevent repeated failures and allow graceful recovery when a service or component is failing.
+1. A Circuit Breaker(Prevents cascading failures with smart fallback mechanisms.) is a resilience pattern used in software systems to prevent repeated failures and allow graceful recovery when a service or component is failing.
 A Circuit Breaker monitors interactions with a remote service. If the service fails repeatedly (e.g., due to timeouts or errors), the circuit "opens" to stop further calls and allow the system to recover. After a cooldown period, it tries again—if successful, it "closes" the circuit.
 It helps avoid cascading failures and improves system stability.
 How it works? -If more than 50% of the last 10 calls fail (failureRateThreshold), the circuit opens. -While open, calls are not made to the payment API, and the fallback method is called instead. -After 10 seconds, the circuit goes to half-open, lets a few calls through, and if they succeed, it closes again.
